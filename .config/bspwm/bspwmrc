@@ -1,0 +1,23 @@
+#! /bin/sh
+
+# hot key daemon
+sxhkd &
+# composite manager
+compton &
+# wallpaper manager
+nitrogen --set-zoom ~/.config/nitrogen/wallpaper.png &
+
+# settings
+bspc monitor -d 1 2 3 4 5 6 7 8 9 10
+
+bspc config border_width            2
+bspc config window_gap              5
+
+bspc config split_ratio             0.50
+bspc config borderless_monocle      true
+bspc config gapless_monocle         false
+bspc config focus_follows_pointer   true
+
+bspc config normal_border_color     "#3c3836"
+bspc config focused_border_color    "#f85959"
+bspc config presel_feedback_color   "#7c6f64"
